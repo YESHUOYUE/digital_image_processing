@@ -81,9 +81,9 @@ def process_frame(frame, template_list):
                 window = frame[y:y+template_height, x:x+template_width]
                 
                 # 计算当前窗口与模板的相关值
-                corr = ssd_match(window, template)
+                # ssd = ssd_match(window, template)
                 # print("ssd:", ssd)
-                # corr = cross_correlation(window, template)
+                corr = cross_correlation(window, template)
                 
                 # 更新最大相关度和最佳匹配位置
                 if corr > max_corr:
